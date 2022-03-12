@@ -1,18 +1,21 @@
 <!DOCTYPE html>  <!-- this line tells the browser how to render the page -->
 
 <html>
+<head>
+<link rel="stylesheet" href="theme.css" />
 <body onLoad="updateTime();"> <!-- defines the main contents of the html file-->
   <title>Pomodoro</title>
   
   <div class="ControlPanel" id="controlPanel">
     <div id="clockFace">
-      <p id="time">something</p>
+      <p id="time">20:00</p>
     </div>
     <button id="toggleTimerBtn" type="button"><p id="toggleTimerBtnVal">Start</p></button>
   </div>
   
-<script src="app.js"></script>
+  <script src="app.js"></script>
 </body> 
+</head>
 </html>
 
 
