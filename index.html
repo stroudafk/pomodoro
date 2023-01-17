@@ -1,21 +1,60 @@
-<!DOCTYPE html>  <!-- this line tells the browser how to render the page -->
+<!DOCTYPE html>
 
-<html>
+<html lang="en">
+
 <head>
-<link rel="stylesheet" href="theme.css" />
-<body onLoad="updateTime();"> <!-- defines the main contents of the html file-->
-  <title>Pomodoro</title>
-  
-  <div class="ControlPanel" id="controlPanel">
-    <div id="clockFace">
-      <p id="time">20:00</p>
-    </div>
-    <button id="toggleTimerBtn" type="button"><p id="toggleTimerBtnVal">Start</p></button>
-  </div>
-  
-  <script src="app.js"></script>
-</body> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, intial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie-edge" />
+  <title> Testing Pomodoro </title>
+  <link rel="stylesheet" href="theme.css" />
 </head>
+
+<body>
+  <main class="app">
+    <progress id="js-progress" value ="0"></progress>
+    <div class="progress-bar"></div>
+    <div class="timer">
+      <div class="button-group mode-buttons" id="js-mode-buttons">
+        
+        <button
+          data-mode="pomodoro"
+          class="button active mode-button"
+          id="js-pomodoro"
+        >
+        Pomodoro
+        </button>
+        
+        <button
+          data-mode="shortBreak"
+          class="button mode-button"
+          id="js-short-break"
+        >
+          Short Break
+        </button>
+        
+        <button
+          data-mode="longBreak"
+          class="button mode-button"
+          id="js-long-break"
+        >
+          Long Break
+        </button>
+      </div>
+
+
+      <div class="Clock" id="js-clock">
+        <span id="js-minutes">25</span>
+        <span class="seperator">:</span>
+        <span id="js-seconds">00</span>
+      </div>
+
+      <button class="main-button" data-action="start" id="js-btn">
+        Start
+      </button>
+
+  </main>
+  <script src="appNew.js"></script>
+</body>
+
 </html>
-
-
